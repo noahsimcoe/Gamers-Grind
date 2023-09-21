@@ -5,7 +5,7 @@ USE gamersgrind_db;
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) UNIQUE,
-    password VARCHAR(255), 
+    password VARCHAR(255),
     registration_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
