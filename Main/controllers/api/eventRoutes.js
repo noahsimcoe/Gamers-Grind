@@ -1,1 +1,3 @@
-const route = require('express').Router();
+const router = require('express').Router();
+
+module.exports = router;
