@@ -1,5 +1,7 @@
-CREATE DATABASE IF NOT EXISTS gamersgrind_db;
+DROP DATABASE IF EXISTS gamersgrind_db;
 
-USE gamersgrind_db;
+CREATE DATABASE gamersgrind_db;
+
+use gamersgrind_db;
 
 
