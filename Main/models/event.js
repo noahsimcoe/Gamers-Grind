@@ -18,7 +18,7 @@ Event.init(
       type: DataTypes.INTEGER,
     },
     description: {
-      type: DataTypes.TEXT, 
+      type: DataTypes.TEXT, // Assuming events have a description
     },
     event_time: {
       type: DataTypes.DATE,
