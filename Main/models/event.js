@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/connections');
 
 class Event extends Model {}
 
@@ -18,7 +18,7 @@ Event.init(
       type: DataTypes.INTEGER,
     },
     description: {
-      type: DataTypes.TEXT, // Assuming events have a description
+      type: DataTypes.STRING, // Assuming events have a description
     },
     event_time: {
       type: DataTypes.DATE,
