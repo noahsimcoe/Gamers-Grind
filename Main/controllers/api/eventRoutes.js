@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Event } = require('../../models/Event');
+const Event = require('../../models/Event');
 
 // GET ROUTE - Find all of the events
 router.get('/', async (req, res) => {
     try {
         const eventData = await Event.findAll();
         res.status(200).json(eventData);
-    } 
+    }
     catch (err) {
         res.status(500).json(err);
     }
@@ -21,8 +21,8 @@ router.get('/:id', async (req, res) => {
             res.status(404).json({ message: "No event found with this id!" });
             return;
         }
-      res.status(200).json(categoryData);
-    } 
+      res.status(200).json(eventData);
+    }
     catch (err) {
         res.status(500).json(err);
     }
@@ -33,16 +33,16 @@ router.post('/', async (req, res) => {
     try {
         const eventData = await Event.create(req.body);
       res.status(200).json(eventData);
-    } 
+    }
     catch (err) {
       res.status(400).json(err);
     }
 });
 
 // PUT ROUTE - Update an event by its 'id'
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
-        Event.update(
+        const updatedEvent = await Event.update(
             {
                 description: req.body.description,
             },
@@ -51,15 +51,13 @@ router.put('/:id', (req, res) => {
                     id: req.params.id,
                 },
             }
-        ).then((updatedEvent) => {
-            res.json(updatedEvent);
-        })
-        if (!eventData) {
-            res.status(404).json({ message: "No event found with this id!" });
-            return;}
-    } 
-    catch (err) {
-        res.status(500).json(err);
+        );
+        if (updatedEvent[0] === 0) {
+            return res.status(404).json({ message: "No event found with this id!"});
+    }
+        res.json(updatedEvent);
+    } catch (err) {
+      res.status(500).json({ error: err.message });
     }
 });
 

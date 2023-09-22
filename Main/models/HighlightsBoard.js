@@ -24,6 +24,7 @@ HighlightsBoard.init(
   },
   {
     sequelize,
+    freezeTableName: true,
     modelName: 'highlights_board',
   }
 );
