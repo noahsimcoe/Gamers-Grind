@@ -27,6 +27,7 @@ CalendarDay.init(
   },
   {
     sequelize,
+    freezeTableName: true,
     modelName: 'calendar_day',
   }
 );
