@@ -17,6 +17,9 @@ HighlightsBoard.init(
     message: {
       type: DataTypes.TEXT,
     },
+    video_url: {
+      type: DataTypes.STRING, 
+    },
     entry_time: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
