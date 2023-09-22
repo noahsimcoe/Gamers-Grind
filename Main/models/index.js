@@ -1,7 +1,6 @@
 const Sequelize = require('sequelize');
 const sequelize = require('./config/connection');
 
-
 const User = require('./models/User');
 const CalendarDay = require('./models/CalendarDay');
 const Event = require('./models/Event');
@@ -30,7 +29,6 @@ Event.belongsTo(CalendarDay, {
 HighlightsBoard.belongsTo(User, {
   foreignKey: 'user_id',
 });
-
 
 module.exports = {
   sequelize,
