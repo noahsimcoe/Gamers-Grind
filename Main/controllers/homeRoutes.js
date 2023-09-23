@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 router.get('/highlights', async (req, res) => {
     try {
         const highlightsData = await HighlightsBoard.findAll({
