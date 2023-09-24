@@ -1,0 +1,41 @@
+.jsCalendar.black-theme table {
+    background-color: #000000;
+    box-shadow: 0 0 2px rgba(80, 80, 80, 0.4);
+    color: #CCCCCC;
+}
+.jsCalendar.black-theme thead .jsCalendar-nav-left,
+.jsCalendar.black-theme thead .jsCalendar-nav-right {
+    color: #505050;
+}
+.jsCalendar.black-theme thead .jsCalendar-nav-left:hover,
+.jsCalendar.black-theme thead .jsCalendar-nav-right:hover {
+    background-color: #252525;
+    color: #AAAAAA;
+}
+.jsCalendar.black-theme tbody td.jsCalendar-selected {
+    background-color: #000000;
+    border: 2px solid #404040;
+}
+.jsCalendar.black-theme tbody td:hover {
+    background-color: #252525;
+    color: #FFFFFF;
+}
+.jsCalendar.black-theme tbody td.jsCalendar-current {
+    background-color: #252525;
+}
+.jsCalendar.black-theme tbody td.jsCalendar-previous,
+.jsCalendar.black-theme tbody td.jsCalendar-next {
+    color: #505050;
+}
+.jsCalendar.black-theme tbody td.jsCalendar-previous:hover,
+.jsCalendar.black-theme tbody td.jsCalendar-next:hover {
+    color: #FFFFFF;
+}
+.jsCalendar.black-theme ::-moz-selection {
+    background: #505050;
+}
+.jsCalendar.black-theme ::selection {
+    background: #505050;
+}
+
+
