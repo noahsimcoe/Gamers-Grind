@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gamers Grind</title>
-  <link rel="stylesheet" href="/Main/public/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -17,12 +17,12 @@
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/highlights">highlights</a>
         <button class="no-button" id="logout">logout</button>
         {{else}}
+        <a href="/highlights">highlights</a>
         <a href="/login">login</a>
         {{/if}}
-        <a href="/highlights">highlights</a>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -30,7 +30,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
