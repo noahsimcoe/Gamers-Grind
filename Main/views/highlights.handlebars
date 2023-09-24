@@ -1,0 +1,10 @@
+<h1>Welcome to our highlights page!</h1>
+
+<!-- This section of text is looping through all of the saved highlights we have in our table -->
+{{#each highlights as |highlight| }}
+<div>
+    <h2>Created by {{highlight.user_id}}</h2>
+    <h3>{{highlight.message}}</h3>
+    <a href="{{highlight.video_url}}">Check out this video</a>
+</div>
+{{/each}}

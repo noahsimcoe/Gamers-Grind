@@ -1,15 +1,13 @@
-const Sequelize = require('sequelize');
-const sequelize = require('./config/connection');
-
-
-const User = require('./models/User');
-const CalendarDay = require('./models/CalendarDay');
-const Event = require('./models/Event');
-const HighlightsBoard = require('./models/HighlightsBoard');
+const User = require('./user');
+const CalendarDay = require('./Calendar');
+const Event = require('./event');
+const HighlightsBoard = require('./HighlightsBoard');
 
 User.hasMany(Event, {
   foreignKey: 'user_id',
+  onDelete: 'CASCASE'
 });
+
 
 CalendarDay.hasMany(Event, {
   foreignKey: 'day_id',
@@ -31,9 +29,7 @@ HighlightsBoard.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-
 module.exports = {
-  sequelize,
   User,
   CalendarDay,
   Event,
