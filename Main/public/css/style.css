@@ -1,6 +1,14 @@
 header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
+
+  body{
+    background-image: url(./assets/NeonPScontr.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
   
   .no-button {
     background: none;
