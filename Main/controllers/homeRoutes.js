@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const HighlightsBoard = require("../models/HighlightsBoard");
-const Event = require("../models/event");
-const User = require("../models/user");
+const {User, HighlightsBoard, Event, Calendar} = require("../models");
 
 router.get('/', async (req, res) => {
     try {
@@ -21,6 +19,7 @@ router.get('/', async (req, res) => {
 router.get('/highlights', async (req, res) => {
     try {
         const highlightsData = await HighlightsBoard.findAll({
+            include: [{model:User}],
         });
         const highlights = highlightsData.map((highlight) => highlight.get({ plain: true }));
         res.render('highlights', {
