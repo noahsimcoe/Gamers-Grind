@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../Main/config/connections');
+const sequelize = require('../config/connections');
 
-class HighlightsBoard extends Model {}
+class Event extends Model {}
 
-HighlightsBoard.init(
+Event.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,14 +13,18 @@ HighlightsBoard.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
-    message: {
-      type: DataTypes.TEXT,
+    day_id: {
+      type: DataTypes.INTEGER,
     },
-    video_url: {
-      type: DataTypes.STRING,
+    description: {
+      type: DataTypes.STRING, // Assuming events have a description
     },
-    entry_time: {
+    event_time: {
       type: DataTypes.DATE,
       defaultValue: DataTypes.NOW,
     },
@@ -28,8 +32,8 @@ HighlightsBoard.init(
   {
     sequelize,
     freezeTableName: true,
-    modelName: 'highlights_board',
+    modelName: 'event',
   }
 );
 
-module.exports = HighlightsBoard;
+module.exports = Event;
