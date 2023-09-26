@@ -2,6 +2,10 @@ header, .project:not(:last-child) {
     border-bottom: 1px solid #ccc;
   }
 
+  .is-size-1 {
+    font-family: 'Black Ops One';
+  }
+
   body{
     background-image: url(./assets/NeonPScontr.png);
     background-repeat: no-repeat;
