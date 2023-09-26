@@ -7,24 +7,31 @@
   <title>Gamers Grind</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One:regular" rel="stylesheet" />
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Gamers Grind</a>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/highlights">Highlights</a>
-        <button class="no-button" id="logout">Logout</button>
-        {{else}}
-        <a href="/highlights">Highlights</a>
-        <a href="/login">Login</a>
-        {{/if}}
-      </nav>
+    <header>
+      <nav class="navbar">
+        <h1>
+          <a class="is-size-2 ml-4" href="/">Gamers Grind</a>
+        </h1>
+        <nav>
+          <div class="navbar-menu" id="nav-links">
+
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <div class="navbar-end">
+              <a class="navbar-item" href="/highlights">Highlights</a>
+              <button class="no-button" id="logout">ogout</button>
+              {{else}}
+              <a class="navbar-item" href="/highlights">Highlights</a>
+              <a class="navbar-item" href="/login">Login</a>
+              {{/if}}
+            </div>
+          </div>
+        </nav>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
@@ -39,6 +46,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
 </body>
 
 </html>
