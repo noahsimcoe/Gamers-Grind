@@ -13,8 +13,6 @@ var jsCalendar = (function(){
         }
     }
 
-    // Version
-    JsCalendar.version = 'v1.4.5-beta';
 
     // Sub-Constructor
     JsCalendar.prototype._construct = function(args) {
