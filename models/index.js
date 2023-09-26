@@ -8,7 +8,6 @@ User.hasMany(Event, {
   onDelete: 'CASCASE'
 });
 
-
 CalendarDay.hasMany(Event, {
   foreignKey: 'day_id',
 });
