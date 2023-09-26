@@ -1,0 +1,81 @@
+<h1>Welcome to our highlights page!</h1>
+
+<!-- This section of text is looping through all of the saved highlights we have in our table -->
+{{#each highlights as |highlight| }}
+<div>
+    <h2>Created by {{highlight.user.username}}</h2>
+    <h3>{{highlight.message}}</h3>
+    <a href="{{highlight.video_url}}">Check out this video</a>
+</div>
+{{/each}}
+
+
+<div class="minimized-form" id="minimizedForm">
+  <span class="add-highlight-text">Add highlight</span>
+</div>
+
+<div class="popup-form" id="popupForm" style="display: none;">
+  <form action="/highlights/add" method="POST">
+    <!-- Title Input -->
+    <div class="form-group">
+      <input type="text" id="title" name="title" placeholder="Title" required>
+    </div>
+
+    <!-- Video Link Input -->
+    <div class="form-group">
+      <input type="text" id="videoLink" name="videoLink" placeholder="Video Link" required>
+    </div>
+
+    <!-- Message Input -->
+    <div class="form-group">
+      <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<style>
+  /* minimized form */
+  .minimized-form {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  /* popup form */
+  .popup-form {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+  }
+</style>
+
+<script>
+  // Java for popup form
+  const minimizedForm = document.getElementById('minimizedForm');
+  const popupForm = document.getElementById('popupForm');
+
+  minimizedForm.addEventListener('click', () => {
+    if (popupForm.style.display === 'block' || popupForm.style.display === '') {
+      popupForm.style.display = 'none';
+    } else {
+      popupForm.style.display = 'block';
+    }
+  });
+</script>
+
+

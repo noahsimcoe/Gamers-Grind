@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
         const events = eventsData.map((event) => event.get({ plain: true}));
         res.render('homepage', {
             events,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
@@ -24,6 +25,7 @@ router.get('/highlights', async (req, res) => {
         const highlights = highlightsData.map((highlight) => highlight.get({ plain: true }));
         res.render('highlights', {
             highlights,
+            logged_in: req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json(err);
