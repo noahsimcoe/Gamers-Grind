@@ -1,0 +1,10 @@
+    <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a href="/highlights">highlights</a>
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/highlights">Highlights</a>
+        <a href="/login">Login</a>
+        {{/if}}
+    </nav>
