@@ -1,4 +1,4 @@
-<h1>Welcome to our homepage!</h1>
+{{!-- <h1>Welcome to our homepage!</h1>
 
 <!-- This section of text is looping through all of the saved events we have in our table -->
 {{#each events as |event| }}
@@ -7,4 +7,12 @@
     <h3>Created by {{event.user_id}}</h3>
     <h3>This event will be on day {{event.day_id}}</h3>
 </div>
-{{/each}}
+{{/each}} --}}
+
+<section class="sectionBackground">
+  <div id="wrapper">
+    <div id="events-calendar"></div>
+    <div id="events"></div>
+    <div class="clear"></div>
+  </div>
+</section>
