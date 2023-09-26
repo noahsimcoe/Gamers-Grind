@@ -15,20 +15,20 @@
 </div>
 
 <div class="popup-form" id="popupForm" style="display: none;">
-  <form action="/highlights/add" method="POST">
-    <!-- Title Input -->
+  <form action="/highlights/add" class="form event-form" method="POST">
+    <!-- Message Input -->
     <div class="form-group">
-      <input type="text" id="title" name="title" placeholder="Title" required>
-    </div>
-
-    <!-- Video Link Input -->
-    <div class="form-group">
-      <input type="text" id="videoLink" name="videoLink" placeholder="Video Link" required>
+      <input type="text" id="user_id" name="user_id" placeholder="User" required>
     </div>
 
     <!-- Message Input -->
     <div class="form-group">
       <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+    </div>
+
+    <!-- Video Link Input -->
+    <div class="form-group">
+      <input type="text" id="videoLink" name="videoLink" placeholder="Video Link" required>
     </div>
 
     <!-- Submit Button -->
@@ -76,6 +76,8 @@
       popupForm.style.display = 'block';
     }
   });
+
 </script>
+<script src="./js/highlights.js">
 
 
