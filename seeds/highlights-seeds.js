@@ -1,4 +1,4 @@
-const HighlightsBoard = require('../models');
+const HighlightsBoard = require('../models/HighlightsBoard');
 
 const highlightsData = [
     {
