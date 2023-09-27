@@ -1,7 +1,7 @@
 const User = require('./user');
-const CalendarDay = require('./Calendar');
+const CalendarDay = require('./calendar');
 const Event = require('./event');
-const HighlightsBoard = require('./HighlightsBoard');
+const HighlightsBoard = require('./highlightsBoard');
 
 User.hasMany(Event, {
   foreignKey: 'user_id',
