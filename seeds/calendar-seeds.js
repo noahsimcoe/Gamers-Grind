@@ -1,3 +1,3 @@
-// const { CalendarDay } = require('../models/Calendar');
+// const { CalendarDay } = require('../models/');
 
 // module.exports = seedCalendarDay;
