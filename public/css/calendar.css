@@ -151,8 +151,9 @@ body {
   cursor: default;
   float: left;
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: bold;
   padding: 0 20px;
+  color: #d5e712;
 }
 .jsCalendar thead .jsCalendar-nav-left:after {
   content: "<";
