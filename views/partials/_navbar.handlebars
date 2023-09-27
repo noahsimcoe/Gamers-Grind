@@ -1,10 +1,15 @@
-    <nav>
+    <nav class="navbar is-link">
+        <h1>
+        <a class="is-size-1 ml-4" href="/">Gamers Grind</a>
+      </h1>
+        <div class="navbar-end">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/highlights">highlights</a>
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/highlights">Highlights</a>
-        <a href="/login">Login</a>
+        <a class="navbar-item has-text-weight-bold" href="/highlights">Highlights</a>
+        <a class="navbar-item has-text-weight-bold" href="/login">Login</a>
         {{/if}}
+        </div>
     </nav>
