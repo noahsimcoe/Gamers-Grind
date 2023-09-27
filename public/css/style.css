@@ -4,6 +4,7 @@ header, .project:not(:last-child) {
 
   .is-size-1 {
     font-family: 'Black Ops One';
+    color: white;
   }
 
   body{
@@ -18,7 +19,7 @@ header, .project:not(:last-child) {
     background: none;
     border: none;
     padding: 0;
-    cursor: pointer;
+    
     color: #1b89bc;
     text-decoration: none;
     font-size: 100%;
@@ -29,9 +30,4 @@ header, .project:not(:last-child) {
     text-decoration: underline;
   }
   
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    margin-left: -5px;
-  }
   
