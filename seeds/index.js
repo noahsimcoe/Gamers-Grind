@@ -2,6 +2,7 @@ const seedUsers = require('./user-seeds');
 const seedEvents = require('./event-seeds');
 const seedHighlights = require('./highlights-seeds');
 
+
 const sequelize = require('../config/connections');
 
 const seedAll = async () => {
