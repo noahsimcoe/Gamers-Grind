@@ -8,7 +8,7 @@ header, .project:not(:last-child) {
   }
 
   body{
-    background-image: url(./assets/NeonPScontr.png);
+    background-image: url(./assets/Neon_controller.png);
     background-repeat: no-repeat;
     background-size:cover;
     min-width: 100vw;
@@ -30,4 +30,21 @@ header, .project:not(:last-child) {
     text-decoration: underline;
   }
   
+  .card-header {
+    justify-content: center;
+    font-family: 'Black Ops One';
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-footer {
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+    font-family: 'Black Ops One';
+  }
   
