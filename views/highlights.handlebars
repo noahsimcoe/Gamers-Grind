@@ -1,12 +1,12 @@
 <section class="box sectionBackground">
-<h1>Welcome to our highlights page!</h1>
+<h1 class="title">Welcome To Our Highlights Page!</h1>
 
 <!-- This section of text is looping through all of the saved highlights we have in our table -->
 {{#each highlights as |highlight| }}
-<div class="card">
-    <h2>Created by {{highlight.user.username}}</h2>
-    <h3>{{highlight.message}}</h3>
-    <a href="{{highlight.video_url}}">Check out this video</a>
+<div class="card mt-5">
+    <h2 class="card-header is-size-4 has-text-weight-bold">Created by {{highlight.user.username}}</h2>
+    <h3 class="has-text-weight-bold card-content is-centered">{{highlight.message}}</h3>
+    <a class="card-footer" href="{{highlight.video_url}}">Check out this video</a>
 </div>
 {{/each}}
 

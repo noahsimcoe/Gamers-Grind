@@ -30,4 +30,22 @@ header, .project:not(:last-child) {
     text-decoration: underline;
   }
   
+  .card-header {
+    justify-content: center;
+    font-family: 'Black Ops One';
+  }
+
+  .card-content {
+    text-align: center;
+  }
+
+  .card-footer {
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+    color: white;
+    font-family: 'Black Ops One';
+  }
   
