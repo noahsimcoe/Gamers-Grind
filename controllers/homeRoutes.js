@@ -1,18 +1,26 @@
 const router = require('express').Router();
 const {User, HighlightsBoard, Event, Calendar} = require("../models");
+const dayjs = require('dayjs');
 
 router.get('/', async (req, res) => {
     try {
         const eventsData = await Event.findAll({
         });
 
+        
         const events = eventsData.map((event) => event.get({ plain: true}));
+        const today = dayjs()
+        
+        const todaysEvents = events.filter((evt) => dayjs(evt.event_time).date() === today.date());
         res.render('homepage', {
-            events,
+            events: todaysEvents,
             logged_in: req.session.logged_in,
         });
     } catch (err) {
-        res.status(500).json(err);
+        console.log(err)
+        res.status(500).json({
+            message: err
+        });
     }
 });
 

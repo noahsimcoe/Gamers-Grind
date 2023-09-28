@@ -27,7 +27,7 @@ elements.addButton.type = "button";
 elements.addButton.value = "Add";
 elements.actions.appendChild(elements.addButton);
 
-var events = {};
+var events = JSON.parse(localStorage.getItem ('events')) ?? {};
 var date_format = "MM/DD/YYYY";
 var current = null;
 
@@ -134,6 +134,15 @@ elements.addButton.addEventListener("click", function(){
 
     // Add event
     events[id].push({name : name});
+localStorage.setItem('events', JSON.stringify(events))
+    fetch('/api/events', {
+        method: 'POST', 
+        body: JSON.stringify ({
+            event_time: new Date(Object.keys(events).find((event) => event = id)),
+            description: name
+        }),
+        headers: {'Content-type': 'application/json'}
+    }) 
 
     // Refresh events
     showEvents(current);
