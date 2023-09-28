@@ -83,6 +83,8 @@ var removeEvent = function (date, index) {
 
     // Remove event
     events[id].splice(index, 1);
+    localStorage.setItem('events', JSON.stringify(events));
+
 
     // Refresh events
     showEvents(current);
