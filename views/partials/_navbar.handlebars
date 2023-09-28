@@ -5,8 +5,8 @@
         <div class="navbar-end">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/highlights">highlights</a>
-        <button class="no-button" id="logout">logout</button>
+        <a class="navbar-item has-text-weight-bold" href="/highlights">Highlights</a>
+        <a class="no-button navbar-item has-text-weight-bold" id="logout">Logout</a>
         {{else}}
         <a class="navbar-item has-text-weight-bold" href="/highlights">Highlights</a>
         <a class="navbar-item has-text-weight-bold" href="/login">Login</a>
