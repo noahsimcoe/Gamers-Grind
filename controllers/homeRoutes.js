@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const {User, HighlightsBoard, Event, Calendar} = require("../models");
 const dayjs = require('dayjs');
+const withAuth = require('../utils/auth')
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         const eventsData = await Event.findAll({
         });
@@ -25,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/highlights', async (req, res) => {
+router.get('/highlights', withAuth, async (req, res) => {
     try {
         const highlightsData = await HighlightsBoard.findAll({
             include: [{model:User}],

@@ -1,7 +1,7 @@
 html,
 body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  color: #d5e712;
+  color: white;
 }
 .description {
   text-align: center;
@@ -12,7 +12,7 @@ body {
 }
 .jsCalendar.clean-theme tbody td.jsCalendar-previous,
 .jsCalendar.clean-theme tbody td.jsCalendar-next {
-  color: #d5e712;
+  color: white;
   opacity: 0.2;
 }
 #wrapper {
@@ -38,14 +38,14 @@ body {
   padding: 5px 0px;
   text-align: center;
   font-weight: bold;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  color: #d5e712;
+  border-bottom: 1px solid white;
+  color: white;
 }
 #events .subtitle {
   padding: 5px 0px;
   font-size: 14px;
   text-align: center;
-  color: #888;
+  color: white;
 }
 #events .list {
   height: 250px;
@@ -124,7 +124,7 @@ body {
 .jsCalendar thead .jsCalendar-nav-left,
 .jsCalendar thead .jsCalendar-nav-right {
   border-radius: 10px;
-  color: #d5e712;
+  color: white;
   cursor: pointer;
   font-family: "Courier New", Courier, monospace;
   font-size: 12px;
@@ -153,7 +153,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   padding: 0 20px;
-  color: #d5e712;
+  color: white;
 }
 .jsCalendar thead .jsCalendar-nav-left:after {
   content: "<";
@@ -179,7 +179,7 @@ body {
   width: 36px;
 }
 .jsCalendar tbody td:hover {
-  background-color: #1dff08;
+  background-color: rgb(24, 76, 156);
 }
 .jsCalendar tbody td.jsCalendar-selected {
   background-color: #ffffff;
