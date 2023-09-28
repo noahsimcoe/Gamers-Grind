@@ -8,7 +8,7 @@ header, .project:not(:last-child) {
   }
 
   body{
-    background-image: url(./assets/NeonPScontr.png);
+    background-image: url(./assets/Neon_controller.png);
     background-repeat: no-repeat;
     background-size:cover;
     min-width: 100vw;
