@@ -20,10 +20,6 @@ HighlightsBoard.init(
     video_url: {
       type: DataTypes.STRING,
     },
-    // entry_time: {
-    //   type: DataTypes.DATE,
-    //   defaultValue: DataTypes.NOW,
-    // },
   },
   {
     sequelize,
