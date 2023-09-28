@@ -24,10 +24,6 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // registration_time: {
-    //   type: DataTypes.DATE,
-    //   defaultValue: DataTypes.NOW,
-    // },
   },
   {
     sequelize,
