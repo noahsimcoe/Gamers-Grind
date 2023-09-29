@@ -1,5 +1,5 @@
 const User = require('./user');
-const CalendarDay = require('./Calendar');
+const CalendarDay = require('./calendar');
 const Event = require('./event');
 const HighlightsBoard = require('./highlightsBoard');
 
